@@ -1,13 +1,17 @@
-$(function () {
-  //メインビジュアルをカルーセルにする
+// $(function () {
+//メインビジュアルをカルーセルにする
+$(document).ready(function () {
   $(".carousel").slick({
     autoplay: true,
     dots: true,
     infinite: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 2000,
     arrow: false,
+    pauseOnHover: false,
   });
+});
 
+$(function () {
   //メニューにホバーした時に不透明度を変化させる
   $("[href]").on("mouseenter", function () {
     // console.log(this);
@@ -98,7 +102,7 @@ $(function () {
       const position = $(this).offset().top;
       // console.log(this);
 
-      if (scrollAmount > position - windowHeight + 200) {
+      if (scrollAmount > position - windowHeight + 100) {
         $(this).addClass("fade-in");
       }
     });

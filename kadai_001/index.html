@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/Style.css" />
-    <!-- 2/11　カルーセル追加-->
+    <!-- 2/11 slickを追加-->
     <link
       rel="stylesheet"
       type="text/css"
@@ -47,32 +47,20 @@
         <!-- <div> -->
         <!-- <img src="images/main.png" alt="カメラの写真" id="mainvisual" /> -->
         <!-- </div> -->
-        <!-- 2/11　カルーセル画像追加 -->
-        <section id="carousel-section">
-          <div class="carousel">
-            <div>
-              <img
-                src="images/main.png"
-                alt="カメラの写真"
-                class="carouselImg"
-              />
-            </div>
-            <div>
-              <img
-                src="images/main2.png"
-                alt="カメラ部品の写真"
-                class="carouselImg"
-              />
-            </div>
-            <div>
-              <img
-                src="images/main3.png"
-                alt="夕暮れの海の写真"
-                class="carouselImg"
-              />
-            </div>
-          </div>
-        </section>
+        <!-- 2/11 カルーセル画像追加 -->
+        <!-- sectionタグは使わない -->
+        <!-- セクションの位置までスクロールしたときにフェードインする時にsectionタグにCSSを付けるため -->
+        <ul class="carousel">
+          <li>
+            <img src="images/main.png" alt="カメラ" class="carouselImg" />
+          </li>
+          <li>
+            <img src="images/main2.png" alt="機材" class="carouselImg" />
+          </li>
+          <li>
+            <img src="images/main3.png" alt="夕暮れの海" class="carouselImg" />
+          </li>
+        </ul>
         <!-- Aboutセクション -->
         <section class="about">
           <h2 id="about">About</h2>
