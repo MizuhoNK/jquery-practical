@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MyProfile" />
+    <title>MyProfile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/Style.css" />
+    <!-- 2/11　カルーセル追加-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+
+  <body>
+    <!-- ヘッダー -->
+    <header>
+      <div class="header-inner">
+        <h1>
+          <a href="index.html">My Profile</a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#works"> Works</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- メインビジュアル -->
+        <!-- <div> -->
+        <!-- <img src="images/main.png" alt="カメラの写真" id="mainvisual" /> -->
+        <!-- </div> -->
+        <!-- 2/11　カルーセル画像追加 -->
+        <section id="carousel-section">
+          <div class="carousel">
+            <div>
+              <img
+                src="images/main.png"
+                alt="カメラの写真"
+                class="carouselImg"
+              />
+            </div>
+            <div>
+              <img
+                src="images/main2.png"
+                alt="カメラ部品の写真"
+                class="carouselImg"
+              />
+            </div>
+            <div>
+              <img
+                src="images/main3.png"
+                alt="夕暮れの海の写真"
+                class="carouselImg"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Aboutセクション -->
+        <section class="about">
+          <h2 id="about">About</h2>
+          <div class="about-inner">
+            <img src="images/about.png" alt="朝比奈一樹氏の写真" id="photo" />
+            <div id="content">
+              <p id="name">Kazuki Asahina</p>
+              <ul>
+                <li>25歳 長野県佐久市出身</li>
+                <li>ソフトウェア業界でマーケティングに従事</li>
+                <li>趣味はカメラ、愛機はCanon</li>
+                <li>自然を撮影するのが好きで、海や山によく行く</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Worksセクション -->
+        <section class="works">
+          <h2 id="works">Works</h2>
+          <div id="works-inner">
+            <div class="works-item">
+              <img src="images/Works1.png" alt="新潟県日本海の写真" />
+              <p>新潟に訪れた際に、日本海の雄大さを魅了されて撮影した1枚</p>
+            </div>
+            <div class="works-item">
+              <img src="images/Works2.png" alt="長野県御嶽山の写真" />
+              <p>地元長野の木曽町から撮影した、冠雪した御嶽山</p>
+            </div>
+            <div class="works-item">
+              <img src="images/Works3.png" alt="京都府町並みの写真" />
+              <p>京都で撮影した、明け方の古き良き日本の町並み</p>
+            </div>
+          </div>
+        </section>
+      </article>
+      <!-- 2/11 追加-->
+      <!-- TOPボタンの追加 -->
+      <a href="#">
+        <button class="btn-top">TOP</button>
+      </a>
+      <!-- モーダル追加 -->
+      <div class="modal">
+        <img src="" alt="" class="modal-img" />
+        <span class="btn-close">&times;</span>
+      </div>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <p>&copy;MyProfile. All rights reserved.</p>
+    </footer>
+
+    <!-- 2/11 追加 -->
+    <!-- jQueryの読み込み -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- slickの読み込み -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

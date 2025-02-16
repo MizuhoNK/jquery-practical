@@ -1,0 +1,218 @@
+/* 共通 */
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダー */
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 20px auto; /*上下の余白をとる*/
+}
+.header-inner a {
+  /* font-size: 34px;*/
+  /* ここでフォントサイズを指定するとMyProfileとナビの各々で文字の大きさを変更したいときに対応できない*/
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* MyProfile 見出し */
+h1 {
+  border: 1px solid black;
+  padding: 0px 20px 0px 20px;
+  margin: 0 0 0 20px;
+  font-size: 34px;
+}
+
+/* ？？要らないかも */
+/* .home {
+  text-decoration: none;
+} */
+
+/* ナビ */
+nav .menu {
+  display: flex;
+}
+nav li {
+  margin: 0 20px;
+  list-style: none;
+}
+nav a {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+/* メインビジュアル  */
+
+/* 画像共通 */
+/*すべての写真を等倍表示する*/
+img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*以下不要 (画像共通を入れたため）*/
+/* #mainvisual {
+  margin: 0 auto;
+  max-width: 1440px; ←これを入れると図を中央に配置できない
+  width: 100%;
+} */
+
+/* セクションの見出し */
+h2 {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  padding: 60px 0 40px 0; /*上下の要素間の間隔をとる*/
+}
+
+/* Aboutセクション */
+.about-inner {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-wrap: row;
+  align-items: center;
+  /* padding: 10px; */
+  margin: 20px auto; /*顔写真と紹介の配置を調整する*/
+  max-width: 960px;
+}
+/* 顔写真 */
+#photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+}
+/* 紹介 */
+#content {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* 名前 */
+#name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Worksセクション */
+#works-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 960px;
+}
+.works-item {
+  margin: 0 10px;
+  padding-bottom: 60px; /*フッターとの間隔をとる*/
+  width: 25%;
+}
+
+/* 2/11追加 */
+/* TOPボタン */
+.btn-top {
+  position: fixed;
+  bottom: 38px;
+  right: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 28px 24px;
+  border-radius: 50%;
+  /* font-family はbodyで指定したものと同じ　*/
+  display: none;
+}
+
+/* スクロール時のフェードイン */
+section {
+  opacity: 0;
+  transition: 1s;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+/* モーダルの設定 */
+.modal {
+  display: none;
+  position: fixed;
+  /* z-index: 1; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* モーダルの画像 */
+.modal-img {
+  position: absolute;
+  width: 80%;
+  max-width: 800px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* モーダルの閉じるボタン */
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding-bottom: 20px; /*一番下に余白をとる*/
+}
+
+/* スマホ用のレイアウト　 */
+/* 横幅が767px以下の場合 */
+@media screen and (max-width: 766.34px) {
+  h1 {
+    font-size: 28px;
+    margin: 0 0 0 0;
+    padding: 0 10px 0 10px;
+  }
+  nav li {
+    margin: 0 10px;
+  }
+  nav a {
+    font-size: 21px;
+  }
+  h2 {
+    font-size: 28px;
+    padding: 30px 0 20px 0; /*PC版より余白を少なくする*/
+  }
+
+  /* Aboutセクション */
+  .about-inner {
+    flex-direction: column;
+  }
+
+  /* Worksセクション */
+  .works-item {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 40px; /*縦並びになるので各要素の間隔を取る*/
+  }
+}
